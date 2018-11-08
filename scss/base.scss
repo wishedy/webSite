@@ -1,0 +1,229 @@
+﻿//﻿@charset "UTF-8";
+//公共方法模块调用
+@import "modules/common-modules";
+//公共变量引用
+@import "variables/_allinmdV2-variables";
+//公共认证弹窗引用
+@import "components/_authPopup2.scss";
+//清除基础样式
+@include normalize(mobile);
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: $indexBackgroundColor;
+}
+
+a {
+    @include unstyled-link();
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li{
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+/* 提示微信下载 的弹层*/
+
+
+.app_download_wx {
+    width: 100%;
+    height: 100%;
+    background: #efeff4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10060;
+}
+
+.app_download_wx img {
+    width: 100%;
+}
+
+.app_download_wx_jump_app {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10039;
+}
+
+.app_download_wx_jump_app .bg {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10040;
+}
+
+.app_download_wx_jump_app.viewport-small .center {
+    width: 80%;
+}
+
+.app_download_wx_jump_app.viewport-small .center img {
+    width: 100%;
+}
+
+.app_download_wx_jump_app .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 10050;
+    width:rem(540px);
+    height:rem(263px);
+}
+
+.app_download_wx_jump_app .center img {
+     width:100%;
+}
+
+.al-mainInner {
+    width: 100%;
+    height: 100%;
+    background-color: $indexBackgroundColor;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.exhibitionImg.authTip{
+    background:#fff;
+}
+
+@import "components/_iconModule"; //图标组件
+@import "components/_middleTipsModal"; //中部上传框体
+@import "components/_buttonModule"; //按钮组件
+@import "components/_confirmModal"; //仿confirm模态框
+@import "components/_animationModule"; //动画关键帧
+@import "components/_sendMsgError"; //发送错误提示
+@import "components/_appWakeUp"; //发送错误提示
+@import "components/_authFail"; //认证失败提示
+@import "components/_footerBar"; //认证失败提示
+@import "components/_releaseModule"; //发布弹层
+@import "components/_bottomSharePart"; //分享弹层
+@import "components/_bottomBtns"; //分享弹层
+@import "components/discoverV2/_promptPopup"; //分享弹层
+@import "components/_authPopup";   //认证2期添加的样式
+
+.al-newsNum {
+    @extend %al-newsNum;
+}
+.icon-newTips{
+    @extend %icon-newTips;
+}
+
+.dk-result-pointer-bg {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #2F2C2C;
+    opacity: 0.9;
+    z-index: 19;
+}
+
+.dk-result-pointer {
+    width: 70%;
+    position: fixed;
+    top: 0.8em;
+    right: 0.4em;
+    //background: url("//img50.allinmd.cn/weixin/share.png") no-repeat;
+    background: url("//img50.allinmd.cn/pages/index/guide.png") no-repeat;
+    background-size: 100%;
+    height: 30em;
+    z-index: 20;
+}
+
+.icon-discoverEntryHot:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(36px);
+    height: rem(36px);
+    background-image: url('//img50.allinmd.cn/pages/index/icon_hot.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: rem(-15px);
+    right: 0;
+    display: none;
+}
+
+
+
+/*vip等级*/
+.al-vipUser {
+    @extend %al-vipUser;
+}
+.al-vipUserV2 {
+    @extend %al-vipUserV2;
+}
+.al-vipUserV1 {
+    @extend %al-vipUserV1;
+}
+
+
+
+/*上下左右箭头图标引用*/
+%al-arrowIcon{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAAAXNSR0IArs4c6QAAA2xJREFUSA2tlttLFFEcx8+ZmZ2dWS/p/9A/0EshUeq2mlJGRFhEBDmuhrfdkSB6iX0ILXMvYiluXiCKLgQGZVnkQ0GRkBRFF0k0SU2piCx6yjl9z2477K6rzq6dlzlnzu/3me/vnN/5naHkPzRND2wmBmshAq2k6+VVeYMFhBnDhLBcSumDdQGr9cA2xowhxkgOhM0LVHQKmSqs9gaLDGbci8AonRVFWtgb0t+JmQDdetBlEOMOYcRBKP0k2WxFF/36BGelHTI2oIwZxiB8FcA+CpLs7G1vnIoJSytkd7N/N3bz1j/YpGSXCuNhHGpZoeZt38sIuY4wZfh9EOxQ1tY0wyHxzZJCbMB+wuiNKIy+l6hYmArGwWsCsWYHGVm6ygizIc/eCFliUTikf45XFd9fFVjd7D/MDHYZqSFhbV45VFtxb4t3IR6Q3F8xbZC0RxljA3AQKaEvFIfiOt/a+DUZkDxOuSlVHr8bhj04ToiSPpcVtbT7TN33ZOdU42UhY83qTBihz0R7tssqjH8gQaGmt3uYQUKRCUqfMDmvvL9N+8nHVpupUPP6j8dgOAGP7HlKWbow/tGIQsBOYgNaoi/oiJifvSfsq/1tVVW8naB5AqdMGOpZrkArMoVxMA/ZML/AEtfUfJ9GR+jraD5NKTnBfXAaShYNNlTj63GkwUgwNXcZ6aKjLAX4LD7w2J6n7ury1f9KsLYwMIHcFtAGQDujfvRpVr6tvNPXtGiBY5okAPnbKj1wDDWvi58SrOioZM/ZGT5b+8P0WKOzDMjtcY41XD5hFAUBBmOy6iixelpSAiNQj/8Io2wgAqXkpaIqrgutDd/WELh6mmBND6F8XUL4InbqdZZq29HZ2vRlNeiKCmNObj1QievyCq+JePdWkdUdXefq52Pzyc81gdwBV8A+rOm1aNUm40y2O/vbGueSYXxsCcgNEX4FoDf5vYIaOUFlVO8Ul5RlIIe6vcFyhD8IpXY4ThFJKe7zN0zzuVhLC8idkKelhOFuZkzFiZqW8T/THdQnMwZyR6ypE+HfhlIHFM0QQSjuCzZn9isSU6J5QtsJWRoCNBvQOSSBs7/DO552yDEgf2re4FYovYs8zcU5XZAkm3NdQA6t8YS2LNE/95GnGwAdWfFe5sZW2tjo8OymgrKHULlRdSgH/gI1lD10HczxDgAAAABJRU5ErkJggg==") no-repeat;
+    background-size: contain;
+    width: rem(20px);
+    height: rem(36px);
+}
+
+/*引导关注*/
+.guideFellow{
+    background: rgba(10,30,43,0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    .erweima{
+        width: rem(448px);
+        height: rem(1092px);
+        //background: url("/images/img50/login/loginV2/care_popup.png") no-repeat;
+        margin: 0 auto;
+        background-size: contain;
+        position: relative;
+        img{
+            width: 100%;
+            //height: 100%;
+        }
+        i{
+            display: inline-block;
+            width: rem(73px);
+            height: rem(73px);
+            background: url("//img50.allinmd.cn/login/loginV2/care_close_popup.png") no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: rem(-20px);
+            top: rem(315px);
+            z-index: 2;
+
+        }
+
+    }
+}
+
+
+/*iphoneX 适配*/
+.al-mainInner{
+    @include iphoneX(){
+        .al-footerBar{
+            padding-bottom:rem(34px);
+        }
+        .al-scrollShareBtn{
+            bottom:rem(200px);
+        }
+    }
+}

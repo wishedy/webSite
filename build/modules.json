@@ -1,0 +1,18 @@
+{
+  "demoTest": {
+    "case_index": {
+      "router": true,
+      "store": true,
+      "des": "二级页面demo",
+      "author": "张晓飞",
+      "index": 1
+    },
+    "case_index2": {
+      "router": true,
+      "store": true,
+      "des": "二级页面demo",
+      "author": "张晓飞",
+      "index": 1
+    }
+  }
+}
