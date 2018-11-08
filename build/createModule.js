@@ -51,7 +51,7 @@ var createModule = function(createPath,createKeyName){
             fs.mkdirSync(utils.resolve('src/modules/'+createPath+"/"+'store'));
             var storeFileName = ["store","mutaions","state","actions","getters"];
             for(var numStroe = 0;numStroe<storeFileName.length;numStroe++){
-                copyFile(utils.resolve('src/commModule/store/store.js'),utils.resolve('src/modules/'+createPath+"/"+'store/'+storeFileName[numStroe]+'.js'));
+                copyFile(utils.resolve('src/commModule/store/'+storeFileName[numStroe]+'.js'),utils.resolve('src/modules/'+createPath+"/"+'store/'+storeFileName[numStroe]+'.js'));
             }
         }
     };
@@ -67,6 +67,7 @@ var createModule = function(createPath,createKeyName){
         createStoreFile();
     }else if(storeKey||routerKey){
         if(storeKey){
+            console.log('这里');
             createStoreFile();
             copyFile(utils.resolve('src/commModule/mainStore.js'),utils.resolve('src/modules/'+createPath+'/main.js'));
         }

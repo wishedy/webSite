@@ -4,7 +4,7 @@ var moduleDataPath = path.resolve(__dirname+'/modules.json');
 var moduleData = fs.readFileSync(moduleDataPath,'utf-8');
 var moduleJson = JSON.parse(moduleData);
 module.exports = {
-    entryModuleName:'help_center',
+    entryModuleName:'case_index',
     checkEntryPath:function(){
         var pathStr = '';
         var t = this;

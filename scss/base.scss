@@ -1,11 +1,9 @@
 ﻿//﻿@charset "UTF-8";
 //公共方法模块调用
 @import "modules/common-modules";
-//公共变量引用
+
 @import "variables/_allinmdV2-variables";
-//公共认证弹窗引用
-@import "components/_authPopup2.scss";
-//清除基础样式
+
 @include normalize(mobile);
 html,
 body {
@@ -97,28 +95,6 @@ i{
     background:#fff;
 }
 
-@import "components/_iconModule"; //图标组件
-@import "components/_middleTipsModal"; //中部上传框体
-@import "components/_buttonModule"; //按钮组件
-@import "components/_confirmModal"; //仿confirm模态框
-@import "components/_animationModule"; //动画关键帧
-@import "components/_sendMsgError"; //发送错误提示
-@import "components/_appWakeUp"; //发送错误提示
-@import "components/_authFail"; //认证失败提示
-@import "components/_footerBar"; //认证失败提示
-@import "components/_releaseModule"; //发布弹层
-@import "components/_bottomSharePart"; //分享弹层
-@import "components/_bottomBtns"; //分享弹层
-@import "components/discoverV2/_promptPopup"; //分享弹层
-@import "components/_authPopup";   //认证2期添加的样式
-
-.al-newsNum {
-    @extend %al-newsNum;
-}
-.icon-newTips{
-    @extend %icon-newTips;
-}
-
 .dk-result-pointer-bg {
     width: 100%;
     position: fixed;
@@ -158,26 +134,7 @@ i{
 
 
 
-/*vip等级*/
-.al-vipUser {
-    @extend %al-vipUser;
-}
-.al-vipUserV2 {
-    @extend %al-vipUserV2;
-}
-.al-vipUserV1 {
-    @extend %al-vipUserV1;
-}
 
-
-
-/*上下左右箭头图标引用*/
-%al-arrowIcon{
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAAAXNSR0IArs4c6QAAA2xJREFUSA2tlttLFFEcx8+ZmZ2dWS/p/9A/0EshUeq2mlJGRFhEBDmuhrfdkSB6iX0ILXMvYiluXiCKLgQGZVnkQ0GRkBRFF0k0SU2piCx6yjl9z2477K6rzq6dlzlnzu/3me/vnN/5naHkPzRND2wmBmshAq2k6+VVeYMFhBnDhLBcSumDdQGr9cA2xowhxkgOhM0LVHQKmSqs9gaLDGbci8AonRVFWtgb0t+JmQDdetBlEOMOYcRBKP0k2WxFF/36BGelHTI2oIwZxiB8FcA+CpLs7G1vnIoJSytkd7N/N3bz1j/YpGSXCuNhHGpZoeZt38sIuY4wZfh9EOxQ1tY0wyHxzZJCbMB+wuiNKIy+l6hYmArGwWsCsWYHGVm6ygizIc/eCFliUTikf45XFd9fFVjd7D/MDHYZqSFhbV45VFtxb4t3IR6Q3F8xbZC0RxljA3AQKaEvFIfiOt/a+DUZkDxOuSlVHr8bhj04ToiSPpcVtbT7TN33ZOdU42UhY83qTBihz0R7tssqjH8gQaGmt3uYQUKRCUqfMDmvvL9N+8nHVpupUPP6j8dgOAGP7HlKWbow/tGIQsBOYgNaoi/oiJifvSfsq/1tVVW8naB5AqdMGOpZrkArMoVxMA/ZML/AEtfUfJ9GR+jraD5NKTnBfXAaShYNNlTj63GkwUgwNXcZ6aKjLAX4LD7w2J6n7ury1f9KsLYwMIHcFtAGQDujfvRpVr6tvNPXtGiBY5okAPnbKj1wDDWvi58SrOioZM/ZGT5b+8P0WKOzDMjtcY41XD5hFAUBBmOy6iixelpSAiNQj/8Io2wgAqXkpaIqrgutDd/WELh6mmBND6F8XUL4InbqdZZq29HZ2vRlNeiKCmNObj1QievyCq+JePdWkdUdXefq52Pzyc81gdwBV8A+rOm1aNUm40y2O/vbGueSYXxsCcgNEX4FoDf5vYIaOUFlVO8Ul5RlIIe6vcFyhD8IpXY4ThFJKe7zN0zzuVhLC8idkKelhOFuZkzFiZqW8T/THdQnMwZyR6ypE+HfhlIHFM0QQSjuCzZn9isSU6J5QtsJWRoCNBvQOSSBs7/DO552yDEgf2re4FYovYs8zcU5XZAkm3NdQA6t8YS2LNE/95GnGwAdWfFe5sZW2tjo8OymgrKHULlRdSgH/gI1lD10HczxDgAAAABJRU5ErkJggg==") no-repeat;
-    background-size: contain;
-    width: rem(20px);
-    height: rem(36px);
-}
 
 /*引导关注*/
 .guideFellow{

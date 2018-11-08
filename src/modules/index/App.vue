@@ -4,8 +4,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import {shareAll} from '@allin/wap-share';
-    window.shareAll = shareAll;
     export default {
         components: {
 

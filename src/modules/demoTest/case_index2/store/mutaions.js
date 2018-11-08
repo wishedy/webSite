@@ -1,13 +1,6 @@
-import  Vue from "vue"
-import Vuex from 'vuex'
-Vue.use(Vuex);
-import state from './state.js'
-import mutations from "./mutaions.js"
-import actions from "./actions.js"
-import getters from "./getters.js"
-export default new Vuex.Store({
-    state,
-    mutations,
-    actions,
-    getters
-});
+const mutaions = {
+    methodFun(state,data){
+        state.num=data;
+    }
+};
+export default mutaions;
